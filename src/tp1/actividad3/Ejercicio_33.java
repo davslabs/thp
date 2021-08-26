@@ -6,25 +6,32 @@ public class Ejercicio_33 {
 
 	public static Scanner input = new Scanner(System.in);
 	public static void main(String[] args) {
-		int num = 0;
-		int max = 0;
-		int min = 0;
+		int num;
+		int max; 
+		int min;
 		
+		num = max = min = 0;
+	
 		do {
 			System.out.println("Ingrese un numero");
 			num = Integer.parseInt(input.nextLine());
-			if(num > max) {
+			
+			if(max == 0 && min == 0) {
 				max = num;
-			} else if(num <= min) {
 				min = num;
 			}
+			
+			if(num > max) {
+				max = num;
+			} else if(num < min && num != 0) {
+				min = num;
+			}
+			
 		} while (num != 0);
-		
 		
 		System.out.println("El numero maximo es: " + max);
 		System.out.println("El numero minimo es: " + min);
 		
 		input.close();
 	}
-
 }
