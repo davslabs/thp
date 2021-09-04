@@ -10,8 +10,8 @@ public class Ejercicio_31_B {
 		
 		while(!opcionValida) {
 			System.out.println("Deseas continuar con la operacion?");
-			char operacion = input.nextLine().charAt(0);
-			opcionValida = operacion == 'S' || operacion == 's' || operacion == 'N' || operacion == 'n';
+			char operacion = input.nextLine().toUpperCase().charAt(0);
+			opcionValida = operacion == 'S' || operacion == 'N';
 		}
 		
 		input.close();
