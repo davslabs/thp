@@ -1,4 +1,4 @@
-package tp2.actividad3;
+package tp2.actividad3.ejercicio456;
 
 public class main {
 
